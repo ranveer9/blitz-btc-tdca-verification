@@ -1,0 +1,352 @@
+{
+  "generated_utc": "2026-09-29 04:35 UTC",
+  "code_version": "v1.0.0",
+  "repo_url": "https://github.com/ranveer9/blitz-btc-tdca-verification",
+  "verdict": {
+    "scalar": true,
+    "annual": true,
+    "cycles": true,
+    "ladder": true,
+    "equity": true,
+    "ledger": true,
+    "terminal": true,
+    "boundary": true,
+    "inputs": true,
+    "phase_a_reproduced": true
+  },
+  "scalar": {
+    "baseline": {
+      "final_wallet": {
+        "independent": 2201183.9840038833,
+        "reference": 2201183.984003883,
+        "match": true
+      },
+      "roi_pct": {
+        "independent": 1550.8921152332005,
+        "reference": 1550.8921152332002,
+        "match": true
+      },
+      "tp_count": {
+        "independent": 14018,
+        "reference": 14018,
+        "match": true
+      },
+      "liq_count": {
+        "independent": 0,
+        "reference": 0,
+        "match": true
+      },
+      "rebal_count": {
+        "independent": 29,
+        "reference": 29,
+        "match": true
+      },
+      "max_step": {
+        "independent": 18,
+        "reference": 18,
+        "match": true
+      },
+      "total_fee": {
+        "independent": 629345.9516533348,
+        "reference": 629345.9516533348,
+        "match": true
+      },
+      "total_volume": {
+        "independent": 899065645.2190292,
+        "reference": 899065645.2190292,
+        "match": true
+      },
+      "total_funding": {
+        "independent": 0.0,
+        "reference": 0.0,
+        "match": true
+      },
+      "total_slippage": {
+        "independent": 0.0,
+        "reference": 0.0,
+        "match": true
+      },
+      "account_mdd_pct": {
+        "independent": -81.31402836338168,
+        "reference": -81.314,
+        "match": true
+      },
+      "trade_count": {
+        "independent": 3198919867,
+        "reference": 3198919867,
+        "match": true
+      },
+      "account_mdd_at": {
+        "independent": 1621429814591,
+        "reference": 1621429814591,
+        "match": true
+      }
+    },
+    "funding_only": {
+      "final_wallet": {
+        "independent": 1801697.354759988,
+        "reference": 1801697.354759988,
+        "match": true
+      },
+      "roi_pct": {
+        "independent": 1251.2763942609765,
+        "reference": 1251.2763942609765,
+        "match": true
+      },
+      "tp_count": {
+        "independent": 14018,
+        "reference": 14018,
+        "match": true
+      },
+      "liq_count": {
+        "independent": 0,
+        "reference": 0,
+        "match": true
+      },
+      "rebal_count": {
+        "independent": 27,
+        "reference": 27,
+        "match": true
+      },
+      "max_step": {
+        "independent": 18,
+        "reference": 18,
+        "match": true
+      },
+      "total_fee": {
+        "independent": 549167.8249535084,
+        "reference": 549167.8249535084,
+        "match": true
+      },
+      "total_volume": {
+        "independent": 784525464.219271,
+        "reference": 784525464.219271,
+        "match": true
+      },
+      "total_funding": {
+        "independent": 136044.21294425678,
+        "reference": 136044.21294425678,
+        "match": true
+      },
+      "total_slippage": {
+        "independent": 0.0,
+        "reference": 0.0,
+        "match": true
+      },
+      "account_mdd_pct": {
+        "independent": -78.1735703143013,
+        "reference": -78.1736,
+        "match": true
+      },
+      "trade_count": {
+        "independent": 3198919867,
+        "reference": 3198919867,
+        "match": true
+      },
+      "account_mdd_at": {
+        "independent": 1621429814591,
+        "reference": 1621429814591,
+        "match": true
+      }
+    },
+    "funding_slip1bp": {
+      "final_wallet": {
+        "independent": 1593044.038240107,
+        "reference": 1593044.038240107,
+        "match": true
+      },
+      "roi_pct": {
+        "independent": 1094.7860156451193,
+        "reference": 1094.7860156451193,
+        "match": true
+      },
+      "tp_count": {
+        "independent": 14018,
+        "reference": 14018,
+        "match": true
+      },
+      "liq_count": {
+        "independent": 0,
+        "reference": 0,
+        "match": true
+      },
+      "rebal_count": {
+        "independent": 25,
+        "reference": 25,
+        "match": true
+      },
+      "max_step": {
+        "independent": 18,
+        "reference": 18,
+        "match": true
+      },
+      "total_fee": {
+        "independent": 503793.3535510687,
+        "reference": 503793.3535510687,
+        "match": true
+      },
+      "total_volume": {
+        "independent": 719704790.787227,
+        "reference": 719704790.787227,
+        "match": true
+      },
+      "total_funding": {
+        "independent": 123423.59005455254,
+        "reference": 123423.59005455254,
+        "match": true
+      },
+      "total_slippage": {
+        "independent": 72186.3905159629,
+        "reference": 72186.3905159629,
+        "match": true
+      },
+      "account_mdd_pct": {
+        "independent": -80.7258738405676,
+        "reference": -80.7259,
+        "match": true
+      },
+      "trade_count": {
+        "independent": 3198919867,
+        "reference": 3198919867,
+        "match": true
+      },
+      "account_mdd_at": {
+        "independent": 1655584468897,
+        "reference": 1655584468897,
+        "match": true
+      }
+    },
+    "funding_slip2bp": {
+      "final_wallet": {
+        "independent": 1410768.9736729765,
+        "reference": 1410768.973672977,
+        "match": true
+      },
+      "roi_pct": {
+        "independent": 958.079375453171,
+        "reference": 958.0793754531713,
+        "match": true
+      },
+      "tp_count": {
+        "independent": 14018,
+        "reference": 14018,
+        "match": true
+      },
+      "liq_count": {
+        "independent": 0,
+        "reference": 0,
+        "match": true
+      },
+      "rebal_count": {
+        "independent": 24,
+        "reference": 24,
+        "match": true
+      },
+      "max_step": {
+        "independent": 18,
+        "reference": 18,
+        "match": true
+      },
+      "total_fee": {
+        "independent": 463725.4152200285,
+        "reference": 463725.41522002855,
+        "match": true
+      },
+      "total_volume": {
+        "independent": 662464878.8857667,
+        "reference": 662464878.8857667,
+        "match": true
+      },
+      "total_funding": {
+        "independent": 113342.79305982144,
+        "reference": 113342.79305982152,
+        "match": true
+      },
+      "total_slippage": {
+        "independent": 132890.45470447774,
+        "reference": 132890.45470447774,
+        "match": true
+      },
+      "account_mdd_pct": {
+        "independent": -81.69401157385803,
+        "reference": -81.694,
+        "match": true
+      },
+      "trade_count": {
+        "independent": 3198919867,
+        "reference": 3198919867,
+        "match": true
+      },
+      "account_mdd_at": {
+        "independent": 1621429814591,
+        "reference": 1621429814591,
+        "match": true
+      }
+    }
+  },
+  "cycle_level": {
+    "ours_cycles": 14018,
+    "ref_cycles": 14018,
+    "compared": 14018,
+    "close_ts_equal": 14018,
+    "depth_equal": 14018,
+    "liquidated_flag_equal": 14018,
+    "open_ts_equal": 14018,
+    "open_ts_diff_where_ref_open_equals_prev_close": 0,
+    "zero_duration_ours": 1025,
+    "zero_duration_ref": 1025,
+    "all_match": true,
+    "same_timing_across_scenarios": {
+      "funding_only": {
+        "cycles": 14018,
+        "identical_close_and_depth": 14018
+      },
+      "funding_slip1bp": {
+        "cycles": 14018,
+        "identical_close_and_depth": 14018
+      },
+      "funding_slip2bp": {
+        "cycles": 14018,
+        "identical_close_and_depth": 14018
+      }
+    }
+  },
+  "equity_curves": {
+    "baseline": {
+      "ours_samples": 2062,
+      "ref_samples": 2062,
+      "timestamps_equal": 2062,
+      "values_exact_2dp": 2062,
+      "values_within_0.01": 2062,
+      "max_abs_diff": 0.0,
+      "all_match": true
+    },
+    "funding_only": {
+      "ours_samples": 2062,
+      "ref_samples": 2062,
+      "timestamps_equal": 2062,
+      "values_exact_2dp": 2062,
+      "values_within_0.01": 2062,
+      "max_abs_diff": 0.0,
+      "all_match": true
+    },
+    "funding_slip1bp": {
+      "ours_samples": 2062,
+      "ref_samples": 2062,
+      "timestamps_equal": 2062,
+      "values_exact_2dp": 2062,
+      "values_within_0.01": 2062,
+      "max_abs_diff": 0.0,
+      "all_match": true
+    },
+    "funding_slip2bp": {
+      "ours_samples": 2062,
+      "ref_samples": 2062,
+      "timestamps_equal": 2062,
+      "values_exact_2dp": 2062,
+      "values_within_0.01": 2062,
+      "max_abs_diff": 0.0,
+      "all_match": true
+    }
+  }
+}
