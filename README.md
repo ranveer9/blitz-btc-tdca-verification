@@ -1,6 +1,6 @@
 # Independent Verification: Blitz T-DCA BTCUSDT Perpetual Backtest
 
-**Author:** Ranveer Verma ([github.com/ranveer9](https://github.com/ranveer9)) · **Version:** v1.0.0 · **Report date:** 2026-09-29
+**Author:** Ranveer Verma ([github.com/ranveer9](https://github.com/ranveer9)) · **Version:** v1.1.0 · **Report date:** 2026-09-29
 **Commissioned by:** Blitz Trading. The work was commissioned; the method, results and conclusions are the author's own, including all limitations and negative findings.
 
 This is a historical verification of a backtest. It is not a guarantee of live trading performance.
@@ -40,6 +40,21 @@ Reproducing the model does **not** validate it as a description of exchange exec
 - **Cost sensitivity:** funding, 1 bp and 2 bp exit slippage reduce the final wallet by 18.1%, 27.6% and 35.9%.
 - **Drawdown and resets:** account MTM drawdown reached -81.3140%. Compounding assumes automatic capital resets that the live bot does not perform.
 
+## Added in v1.1.0
+
+**Client closure-time risk metrics** (MAE, capital utilisation, liquidation room), recomputed from definitions supplied after v1.0.0: **64 of 64** published values agree exactly (report Section 3.8).
+
+**Quantified fill and latency sensitivities** on the baseline cost scenario (report Section 4.7), run with a compiled engine that reproduces all four Phase A runs bit-for-bit:
+
+| Rule | Final wallet (USD) | vs reproduced baseline | TP cycles | Max drawdown | Liquidation |
+|---|---|---|---|---|---|
+| F1 one-tick trade-through | 2,249,550.34 | +2.20% | 14,158 | -86.30% | no |
+| F2 volume at/through >= 1x size | 1,653,363.98 | -24.89% | 12,445 | -91.89% | no |
+| F3 volume at/through >= 2x size | 1,620,936.43 | -26.36% | 12,311 | -92.81% | no |
+| L1 1-second latency | 1,310,070.72 | -40.48% | 11,304 | -80.91% | no |
+
+aggTrade quantity is a proxy for executable volume; queue ahead is assumed and fills are all-or-nothing.
+
 ## ⚠️ What this public repository does NOT contain
 
 At the client's written instruction, the following are **private** and omitted here: exact ladder offsets, sizing weights, preset configuration values (leverage, take-profit, reset threshold, fee and maintenance settings) and all trade/cycle-level records. `code/engine_generic.py` contains the full event logic but reads every parameter from a private configuration file (structure in `code/config_template.json`).
@@ -53,6 +68,8 @@ blitz_btc_verification_report.pdf     public edition of the report
 results/scalar_comparison.csv         scenario totals: independent vs published
 results/annual_comparison.csv         annual figures: independent vs published
 results/verification_summary.json     verdicts and aggregate comparison statistics
+results/phase_b_additions.csv         v1.1.0: client risk metrics and fill/latency sensitivities
+code/fastsim.py                       compiled multi-simulation engine used for v1.1.0 (no configuration inside)
 code/engine_generic.py                generic engine (parameters loaded from private config)
 code/run_generic.py                   example runner
 code/downloader.py                    data retrieval with official checksum verification
