@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-09-29 04:35 UTC",
-  "code_version": "v1.0.0",
+  "generated_utc": "2026-09-29 10:33 UTC",
+  "code_version": "v1.1.0",
   "repo_url": "https://github.com/ranveer9/blitz-btc-tdca-verification",
   "verdict": {
     "scalar": true,
@@ -281,6 +281,45 @@
         "independent": 1621429814591,
         "reference": 1621429814591,
         "match": true
+      }
+    }
+  },
+  "phase_b_additions": {
+    "compiled_engine_validated": true,
+    "client_metrics_all_match": {
+      "baseline": true,
+      "funding_only": true,
+      "funding_slip1bp": true,
+      "funding_slip2bp": true
+    },
+    "sensitivities": {
+      "F1_tick": {
+        "final_wallet": 2249550.337221339,
+        "tp_count": 14158,
+        "liq_count": 0,
+        "account_mdd_pct": -86.29622250442092,
+        "liquidated_at_ms": null
+      },
+      "F2_vol1x": {
+        "final_wallet": 1653363.9759116136,
+        "tp_count": 12445,
+        "liq_count": 0,
+        "account_mdd_pct": -91.89391583046877,
+        "liquidated_at_ms": null
+      },
+      "F3_vol2x": {
+        "final_wallet": 1620936.4265650422,
+        "tp_count": 12311,
+        "liq_count": 0,
+        "account_mdd_pct": -92.81326163605866,
+        "liquidated_at_ms": null
+      },
+      "L1_lat1s": {
+        "final_wallet": 1310070.7152007555,
+        "tp_count": 11304,
+        "liq_count": 0,
+        "account_mdd_pct": -80.91173583369354,
+        "liquidated_at_ms": null
       }
     }
   },
