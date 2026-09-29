@@ -1,6 +1,6 @@
 # Independent Verification: Blitz T-DCA BTCUSDT Perpetual Backtest
 
-**Author:** Ranveer Verma ([github.com/ranveer9](https://github.com/ranveer9)) · **Version:** v1.1.0 · **Report date:** 2026-09-29
+**Author:** Ranveer Verma ([github.com/ranveer9](https://github.com/ranveer9)) · **Version:** v1.1.1 · **Report date:** 2026-09-29
 **Commissioned by:** Blitz Trading. The work was commissioned; the method, results and conclusions are the author's own, including all limitations and negative findings.
 
 This is a historical verification of a backtest. It is not a guarantee of live trading performance.
@@ -34,7 +34,7 @@ All twelve compared totals per scenario agree within the stated tolerances. So d
 Reproducing the model does **not** validate it as a description of exchange execution.
 
 - **Liquidation:** modelled on trade (last) prices with a flat maintenance fraction. **Last price is not inherently a conservative substitute for mark price**, and Binance's notional-tiered maintenance is not modelled. The modelled path came within 6.04% of its liquidation price. Zero modelled liquidations do not prove exchange-level survival. The mark-price effect is not quantified.
-- **Fills:** every ladder order and TP is assumed to fill in full on any print at or through its price. **A one-tick trade-through does not guarantee queue clearance or a full fill.** Partial fills, queue position, liquidity and latency are not modelled.
+- **Fills:** every ladder order and TP is assumed to fill in full on any print at or through its price. **A one-tick trade-through does not guarantee queue clearance or a full fill.** In the reference (original) assumptions, partial fills, queue position, liquidity and latency are not modelled. Their effect is tested separately in the v1.1.0 sensitivity tests (volume-aware fills and 1-second latency; see *Added in v1.1.0* below and report Section 4.7).
 - **Latency:** 2,937 of 14,018 cycles lasted under one second (1,025 opened and closed in the same millisecond), contributing 15.2% of closed-cycle profit. They depend on zero-latency order placement and instantaneous TP replacement.
 - **Fees:** charging a 0.05% taker rate on the immediate first entry would cost about 6.1% of closed-cycle net profit (first order). Maker exits would instead reduce modelled exit cost by about 13.0%. The net effect depends on the live order types.
 - **Cost sensitivity:** funding, 1 bp and 2 bp exit slippage reduce the final wallet by 18.1%, 27.6% and 35.9%.
